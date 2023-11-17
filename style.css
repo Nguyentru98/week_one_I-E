@@ -11,13 +11,11 @@
 .header {
   width: 100%;
   height: 500px;
-
   position: relative;
 }
 .background-image {
   width: 100%;
   height: 500px;
-
   position: absolute;
   top: 0px;
 }
@@ -114,6 +112,7 @@
 .logo {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .logo img {
   margin-right: 10px;
@@ -133,9 +132,26 @@
   margin-right: 20px;
   color: #ffffff;
   font-weight: lighter;
+  cursor: pointer;
+  position: relative;
+}
+.item::after {
+  content: "";
+  width: 0px;
+  height: 3px;
+  background: tomato;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: all 0.5s ease-in-out;
+}
+.item:hover::after {
+  width: 50%;
+  transform: translateX(100%);
 }
 .serach i {
   color: #ffffff;
+  cursor: pointer;
 }
 .header-title {
   width: 100%;
@@ -149,10 +165,12 @@
   margin-bottom: 10px;
   font-size: -webkit-xxx-large;
   font-size: 3em;
+  cursor: default;
 }
 .header-title p {
   font-size: 1.5em;
   font-weight: lighter;
+  cursor: default;
 }
 
 /* main */
@@ -177,6 +195,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.5s;
+}
+.card-item-button:hover,
+.card-item-top:hover {
+  transform: scale(1.05);
 }
 .card-item-button span {
   font-size: 50px;
@@ -201,6 +224,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.5s;
 }
 .card-item-top span {
   font-size: 50px;
@@ -326,6 +350,7 @@
   margin: 0 200px 0 0;
   height: 80%;
   background-color: aliceblue;
+  cursor: default;
 }
 .text-content h3 {
   margin: 40px 40px 20px 20px;
@@ -346,9 +371,11 @@
   font-size: large;
   margin-right: 5px;
   margin: 0 10px 0 20px;
+  cursor: default;
 }
 .time span {
   font-size: large;
+  cursor: default;
 }
 .time h4 {
   width: 100%;
@@ -357,6 +384,7 @@
   color: rgb(230, 17, 42);
   font-weight: 800;
   margin-right: 15px;
+  cursor: pointer;
 }
 .circle {
   border-radius: 50%;
@@ -388,12 +416,14 @@
   width: 100%;
   height: 100px;
   margin-bottom: 35px;
+  cursor: default;
 }
 .train-title h2 {
   margin: 20px 0 20px 0;
   font-size: 30px;
   font-weight: bold;
   margin-left: 200px;
+  cursor: default;
 }
 .train-circle {
   border-radius: 50%;
@@ -411,11 +441,12 @@
   margin-left: 200px;
   font-size: 20px;
   font-weight: lighter;
+  cursor: default;
 }
-
 .train-content {
   display: flex;
   position: relative;
+  cursor: default;
 }
 .train-content-text {
   flex: 1;
@@ -424,6 +455,7 @@
   margin-left: 200px;
   font-size: 25px;
   margin-bottom: 20px;
+  cursor: default;
 }
 .train-content-text p {
   margin-left: 200px;
@@ -431,6 +463,7 @@
   font-size: 20px;
   line-height: 1.5;
   margin-right: 10px;
+  cursor: default;
 }
 
 .train-content-image {
@@ -461,6 +494,7 @@
   position: absolute;
   left: 40%;
   bottom: 10%;
+  cursor: pointer;
 }
 .train-content-arrow i {
   color: #059f4a;
@@ -518,6 +552,7 @@
   );
   position: relative;
   margin-top: 100px;
+  cursor: default;
 }
 
 .text {
@@ -594,6 +629,7 @@
 .card-shape-title-1 span {
   font-weight: bold;
   color: red;
+  cursor: pointer;
 }
 .card-shape-2 {
   width: 400px;
@@ -628,6 +664,7 @@
 .card-shape-title-2 span {
   font-weight: bold;
   color: red;
+  cursor: pointer;
 }
 
 /* cooperate */
@@ -636,6 +673,7 @@
   height: 600px;
   display: flex;
   margin-top: 10px;
+  cursor: default;
 }
 
 .cooperate-card {
@@ -653,6 +691,8 @@
 }
 .cooperate-card-image {
   display: flex;
+  overflow: hidden;
+
 }
 .cooperate-card-image img {
   width: 300px;
@@ -660,11 +700,14 @@
   border-radius: 5px 20px 5px 20px;
   margin: 10px 0 0 20px;
   object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+.cooperate-card-image img:hover {
+  transform: scale(1.1);
 }
 .cooperate-content {
   flex: 1;
   position: relative;
-
 }
 
 .cooperate-content-image {
@@ -699,6 +742,7 @@
 .cooperate-time span {
   color: red;
   font-weight: bold;
+  cursor: pointer;
 }
 .cooperate-arrow {
   width: 100%;
@@ -708,6 +752,7 @@
   transform: translateX(500px);
   color: #059f4a;
   margin-right: 15px;
+  cursor: pointer;  
 }
 /* share */
 .share {
@@ -747,6 +792,7 @@
   text-align: right;
   margin-bottom: 100px;
   margin-right: 240px;
+  cursor: default;
 }
 .share-title h2 {
   font-size: 30px;
@@ -873,6 +919,13 @@
   border-radius: 5px 40px 5px 40px;
   overflow: hidden;
 }
+.photo-1 img:hover, 
+.photo-2 img:hover, 
+.photo-3 img:hover, 
+.photo-4 img:hover,
+.photo-5 img:hover {
+  transform: scale(1.1);
+}
 .photo-2 {
   width: 300px;
   height: 210px;
@@ -909,8 +962,8 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  transition: all 0.5s ease-in-out;
 }
-
 .photo-more {
   color: #059f4a;
   text-align: center;
@@ -990,7 +1043,7 @@
 /* ----footer content */
 .footer-content {
   position: absolute;
-  top:200px;
+  top: 200px;
   width: 100%;
 }
 .footer-top {
@@ -1000,10 +1053,9 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
-
 }
 .footer-logo {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 .footer-title {
   display: flex;
@@ -1019,17 +1071,17 @@
   justify-content: space-around;
   line-height: 2;
 }
-.footer-middle-col-1{
+.footer-middle-col-1 {
   display: flex;
   flex-direction: column;
 }
-.footer-middle-col-2{
+.footer-middle-col-2 {
   display: flex;
 }
 .middle-col-2-1 {
   display: flex;
   flex-direction: column;
-  margin-right:10px ;
+  margin-right: 10px;
 }
 .middle-col-2-2 {
   display: flex;
