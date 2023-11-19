@@ -15,19 +15,124 @@
 }
 .background-image {
   width: 100%;
-  height: 500px;
+  height: 100%;
   position: absolute;
   top: 0px;
+  overflow: hidden;
 }
 .background-image img {
   width: 100%;
-  height: 100%;
+  height: 75%;
+  object-fit: cover;
+  opacity: 0.6;
 }
+
 .background-circle {
   width: 100%;
-  height: 500px;
+  height: 100%;
   position: relative;
   top: 0px;
+}
+.shape-header-1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  background: linear-gradient(
+    0deg,
+    rgb(120 233 157) 0%,
+    rgb(15, 150, 76) 100%,
+    rgba(221, 0, 0, 1) 100%
+  );
+  opacity: 0.6;
+}
+.shape-header-2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  background: linear-gradient(
+    0deg,
+    rgb(120 233 157) 0%,
+    rgb(15, 150, 76) 100%,
+    rgba(221, 0, 0, 1) 100%
+  );
+  opacity: 0.6;
+}
+.shape-header-3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  background: linear-gradient(
+    0deg,
+    rgb(120 233 157) 0%,
+    rgb(15, 150, 76) 100%,
+    rgba(221, 0, 0, 1) 100%
+  );
+  opacity: 0.6;
+}
+.custom-shape-divider-bottom-1700273191 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1700273191 svg {
+  position: relative;
+  display: block;
+  width: calc(124% + 1.3px);
+  height: 220px;
+}
+
+.custom-shape-divider-bottom-1700273191 .shape-fill {
+  fill: #ffffff;
+}
+.custom-shape-divider-bottom-1700272313 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1700272313 svg {
+  position: relative;
+  display: block;
+  width: calc(166% + 1.3px);
+  height: 241px;
+}
+
+.custom-shape-divider-bottom-1700272313 .shape-fill {
+  fill: #ffffff;
+}
+
+/* header bg */
+.custom-shape-divider-bottom-1700271868 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1700271868 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 241px;
+}
+
+.custom-shape-divider-bottom-1700271868 .shape-fill {
+  fill: #ffffff;
 }
 .circle-1 {
   border-radius: 50%;
@@ -94,40 +199,42 @@
   height: 500px;
   position: absolute;
   top: 0px;
-  background-image: linear-gradient(
-    45deg,
-    rgba(137, 213, 172, 0.5),
-    rgba(25, 170, 87, 0.5)
-  );
 }
 .nav {
   width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   position: absolute;
   top: 0px;
 }
-.logo {
-  display: flex;
+.logo-school {
   align-items: center;
   cursor: pointer;
+  display:flex
 }
-.logo img {
+.logo-image img {
   margin-right: 10px;
 }
-.logo-tittle h3 {
+.school-name h3 {
   color: #ffffff;
 }
-.logo-tittle p {
+.school-name p {
   color: #ffffff;
 }
-
+.toggle {
+  display: none;
+}
 .menu {
   display: flex;
+
 }
-.item {
+.menu-list {
+  display: flex;
+}
+.menu-list li a {
+  text-decoration: none;
   font-size: 14px;
   margin-right: 20px;
   color: #ffffff;
@@ -135,7 +242,7 @@
   cursor: pointer;
   position: relative;
 }
-.item::after {
+.menu-list li a::after {
   content: "";
   width: 0px;
   height: 3px;
@@ -176,7 +283,7 @@
 /* main */
 .card {
   width: 100%;
-  height: 500px;
+  height: 350px;
   margin-bottom: 100px;
   display: flex;
   align-items: center;
@@ -337,12 +444,22 @@
   margin: 5px;
   align-items: center;
   position: relative;
-}
-.news-event-content img {
-  border-radius: 10px 10px 10px 50px;
+}.news-event-image {
+  width: 100%;
+  height: 80%; 
+  overflow: hidden;
   flex: 1;
-  margin: 0 0 0 200px;
-  height: 80%;
+  border-radius: 10px 10px 10px 50px;
+  margin-left: 200px;
+}
+.news-event-image img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  object-fit: cover;
+}
+.news-event-image img:hover {
+  transform: scale(1.1);
 }
 .text-content {
   border-radius: 10px 50px 10px 10px;
@@ -764,20 +881,25 @@
 .share-background-circle {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .share-circle-1 {
   border-radius: 50%;
   width: 250px;
   height: 250px;
   background-color: #7ee5ac;
-  transform: translate(-10px, 540px);
+  position: absolute;
+  bottom: 50px;
+  left: -60px;
 }
 .share-circle-2 {
   border-radius: 50%;
   width: 250px;
   height: 250px;
   background-color: #7ee5ac;
-  transform: translate(1230px, 150px);
+  position: absolute;
+  bottom: 100px;
+  right: -60px;
 }
 
 .share-content {
@@ -808,21 +930,15 @@
   margin-left: auto;
   margin-right: auto;
 }
-.share-card-content {
-  flex: 1;
-  width: 100%;
-  height: 70%;
-  border-radius: 0 30px 0 30px;
-  margin-right: 15px;
-  line-height: 1.7;
-  background-color: #ffffff;
-}
+
 .share-circle-image {
   width: 100%;
-  height: 130px;
+  height: 100%;
   display: flex;
   position: absolute;
   top: 120px;
+
+
 }
 .circle-image-1 {
   border-radius: 50%;
@@ -830,7 +946,7 @@
   height: 130px;
   overflow: hidden;
   display: flex;
-  margin-left: 280px;
+  margin-left: 170px;
 }
 .circle-image-2 {
   border-radius: 50%;
@@ -838,7 +954,7 @@
   height: 130px;
   overflow: hidden;
   display: flex;
-  margin-left: 240px;
+  margin-left: 320px;
 }
 .circle-image-3 {
   border-radius: 50%;
@@ -846,7 +962,7 @@
   height: 130px;
   overflow: hidden;
   display: flex;
-  margin-left: 230px;
+  margin-left: 320px;
 }
 .circle-image-1 img,
 .circle-image-2 img,
@@ -855,10 +971,33 @@
   height: 100%;
   object-fit: cover;
 }
-.share-card-content {
+.share-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 190px;
+  display: flex;
+}
+.share-card-content-1 ,
+.share-card-content-2 ,
+.share-card-content-3 {
+  flex: 1;
+  justify-content: space-evenly;
+  height:60%;
+  border-radius: 0 50px 0 50px;
+  line-height: 1.7;
+  background-color: #ffffff;
   -webkit-box-shadow: 1px 5px 8px 4px rgba(0, 0, 0, 0.17);
   box-shadow: 1px 5px 8px 4px rgba(0, 0, 0, 0.17);
-  margin-right: 30px;
+}
+.share-card-content-1 {
+  margin: 0 20px 0 100px;
+}
+.share-card-content-2 {
+  margin: 0 20px;
+}
+.share-card-content-3 {
+  margin: 0 100px 0 10px;
 }
 .text-share-card-content {
   margin-top: 100px;
@@ -873,7 +1012,7 @@
 }
 .share-more {
   position: absolute;
-  bottom: 70px;
+  bottom: 0px;
   right: 50%;
   color: green;
   font-size: large;
