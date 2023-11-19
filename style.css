@@ -113,7 +113,6 @@
   fill: #ffffff;
 }
 
-/* header bg */
 .custom-shape-divider-bottom-1700271868 {
   position: absolute;
   bottom: 0;
@@ -248,11 +247,11 @@
   height: 3px;
   background: tomato;
   position: absolute;
-  bottom: 0px;
+  bottom: -5px;
   left: 0px;
   transition: all 0.5s ease-in-out;
 }
-.item:hover::after {
+.menu-list li a:hover::after {
   width: 50%;
   transform: translateX(100%);
 }
