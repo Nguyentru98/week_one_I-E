@@ -15,6 +15,7 @@
   }
   .footer-middle-col-1 {
     margin-bottom: 20px;
+    font-size: 14px;
   }
   .footer-bottom {
     margin-top: 75px;
@@ -22,5 +23,11 @@
   .share-card-content-1,
   .share-card-content-2 {
     margin-bottom: 100px;
+  }
+  .footer-middle-col-2 {
+    font-size: 14px ;
+  }
+  .footer-bottom span {
+    font-size: 14px ;
   }
 }
