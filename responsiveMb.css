@@ -1,6 +1,26 @@
-@media (max-width: 430px) {
+@media (max-width: 460px) {
   .shape-title {
     top: 10%;
     right: 1%;
+  }
+  .share-title {
+    margin-right: 10px;
+  }
+  .footer-title {
+    font-size: large;
+    margin-bottom: 50px;
+  }
+  .footer-middle {
+    flex-direction: column;
+  }
+  .footer-middle-col-1 {
+    margin-bottom: 20px;
+  }
+  .footer-bottom {
+    margin-top: 75px;
+  }
+  .share-card-content-1,
+  .share-card-content-2 {
+    margin-bottom: 100px;
   }
 }
