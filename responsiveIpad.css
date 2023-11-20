@@ -1,4 +1,3 @@
-
 @media (max-width: 768px) {
   .circle-1,
   .circle-2,
@@ -70,30 +69,25 @@
   }
 
   /* card */
-
+  .card {
+    flex-direction: column;
+  }
   .card-item-button,
   .card-item-top {
-    height: 250px;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
   }
-
   .card-icon-1,
   .card-icon-2,
   .card-icon-3,
   .card-icon-4 {
     width: 50px;
     height: 50px;
-    margin: 15px 0 0 35%;
-  }
-  .card-item-button h3,
-  .card-item-top h3 {
-    font-size: 1.3em;
-  }
-
-  .card-item-button span {
-    font-size: 40px;
+    margin: 15px 0 0 45%;
   }
   .news-event {
-    padding: 10px;
+    width: 90%;
   }
   .news-event h2,
   .news-event p {
@@ -102,9 +96,12 @@
   .circle {
     display: none;
   }
+  .news-event-content {
+    flex-direction: column;
+  }
   .news-event-image,
   .text-content {
-    margin: 0px;
+    width: 100%;
   }
   .text-content h3 {
     margin: 10px 40px 20px 20px;
@@ -115,7 +112,12 @@
     bottom: 20px;
     position: absolute;
   }
+.train {
 
+}
+.train-content {
+  flex-direction: column;
+}
   .train-circle,
   .train-content-circle {
     display: none;
@@ -131,6 +133,7 @@
   }
   .train-content-text {
     padding: 10px;
+    width: 100%;
   }
   .train-content-text h3,
   .train-content-text p {
@@ -138,6 +141,7 @@
   }
   .train-content-image {
     margin-right: 0px;
+    width: 100%;
   }
   .train-content-arrow {
     bottom: -15%;
@@ -179,43 +183,28 @@
   .share-circle-image,
   .share-card {
     flex-direction: column;
-  }
-  .circle-image-1 ,
-  .circle-image-2 ,
-  .circle-image-3 {
-    width: 100px;
-    height: 100px;
-    margin: 20px 0 0 80px ;
-  }
-  .circle-image-1 {
-    margin: 20px 0 0 80px ;
-  }
-  .circle-image-2 {
-    margin: 160px 0 0 80px;
-  }
-  .circle-image-3 {
-    margin: 160px 0 0 80px ;
+    flex-wrap: wrap;
   }
   .share-card-content-1,
   .share-card-content-2,
   .share-card-content-3 {
-    margin: 0 20px 70px 20px;
-    height: 50%;
+    margin: 0 20px 80px 20px;
+    width: 100%;
   }
 
   .text-share-card-content {
     line-height: 1.5;
-    margin-top: 60px;
+    min-height: 150px;
   }
   .text-share-card-content h2 {
     margin-bottom: 0px;
     font-size: large;
   }
 
-  .share-more{
+  .share-more {
     bottom: -160px;
   }
-  
+
   /* libary */
 
   .photo-title {

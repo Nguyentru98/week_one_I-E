@@ -207,11 +207,12 @@
   justify-content: space-evenly;
   position: absolute;
   top: 0px;
+  /* position: fixed; */
 }
 .logo-school {
   align-items: center;
   cursor: pointer;
-  display:flex
+  display: flex;
 }
 .logo-image img {
   margin-right: 10px;
@@ -227,7 +228,6 @@
 }
 .menu {
   display: flex;
-
 }
 .menu-list {
   display: flex;
@@ -281,22 +281,20 @@
 
 /* main */
 .card {
-  width: 100%;
-  height: 350px;
   margin-bottom: 100px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  margin: 0 5% 10%;
 }
 .card-item-button {
-  width: 300px;
-  height: 350px;
+  margin-bottom: 50px;
+  width: 20%;
   border: 1px solid white;
   border-radius: 0 40px 0 40px;
-  margin: 0 15px;
   -webkit-box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.18);
   box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.18);
-  margin-bottom: 50px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -311,6 +309,7 @@
   font-size: 50px;
   color: #1aaf5d;
   font-weight: 600;
+  margin: 30px 0;
 }
 .card-item-button h3 {
   margin-bottom: 40px;
@@ -318,14 +317,11 @@
   font-weight: 600;
 }
 .card-item-top {
-  width: 300px;
-  height: 350px;
+  width: 20%;
   border: 1px solid white;
   border-radius: 0 40px 0 40px;
-  margin: 0 15px;
   -webkit-box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.18);
   box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.18);
-  margin-top: 50px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -336,6 +332,7 @@
   font-size: 50px;
   color: #1aaf5d;
   font-weight: 600;
+  margin: 30px 0;
 }
 .card-item-top h3 {
   margin-bottom: 40px;
@@ -420,36 +417,31 @@
 }
 .news-event {
   width: 100%;
-  height: 100px;
   text-align: right;
-  margin: 5px;
+  margin-bottom: 30px;
 }
 .news-event h2 {
   margin-bottom: 10px;
   font-size: 30px;
   font-weight: bold;
-  margin-right: 200px;
+  margin-right: 10%;
 }
 .news-event p {
-  margin-right: 200px;
+  margin-right: 10%;
   font-size: 20px;
   font-weight: lighter;
 }
 
 .news-event-content {
-  width: 100%;
-  height: 500px;
+  width: 80%;
   display: flex;
-  margin: 5px;
-  align-items: center;
-  position: relative;
-}.news-event-image {
-  width: 100%;
-  height: 80%; 
+  margin: auto;
+}
+.news-event-image {
+  width: 50%;
+  height: 100%;
   overflow: hidden;
-  flex: 1;
   border-radius: 10px 10px 10px 50px;
-  margin-left: 200px;
 }
 .news-event-image img {
   height: 100%;
@@ -462,9 +454,7 @@
 }
 .text-content {
   border-radius: 10px 50px 10px 10px;
-  flex: 1;
-  margin: 0 200px 0 0;
-  height: 80%;
+  width: 50%;
   background-color: aliceblue;
   cursor: default;
 }
@@ -524,21 +514,18 @@
 }
 .train {
   width: 100%;
-  height: 500px;
-  position: relative;
-  margin-bottom: 30px;
+  margin: 5% 0;
 }
 .train-title {
   width: 100%;
-  height: 100px;
-  margin-bottom: 35px;
   cursor: default;
+  padding-left: 10%;
+  margin-bottom: 2%;
+  line-height: 1.5;
 }
 .train-title h2 {
-  margin: 20px 0 20px 0;
   font-size: 30px;
   font-weight: bold;
-  margin-left: 200px;
   cursor: default;
 }
 .train-circle {
@@ -554,7 +541,6 @@
   right: 45%;
 }
 .train-title p {
-  margin-left: 200px;
   font-size: 20px;
   font-weight: lighter;
   cursor: default;
@@ -563,41 +549,36 @@
   display: flex;
   position: relative;
   cursor: default;
+  width: 80%;
+  margin: auto;
+  flex-wrap: wrap;
 }
 .train-content-text {
-  flex: 1;
+  width: 50%;
+  line-height: 3.5;
 }
 .train-content-text h3 {
-  margin-left: 200px;
   font-size: 25px;
-  margin-bottom: 20px;
   cursor: default;
 }
 .train-content-text p {
-  margin-left: 200px;
   font-weight: lighter;
   font-size: 20px;
   line-height: 1.5;
-  margin-right: 10px;
   cursor: default;
 }
 
 .train-content-image {
-  height: 100%;
-  flex: 1;
-  margin-right: 200px;
+  width: 50%;
 }
 .train-content-image img {
   width: 100%;
   height: 100%;
-  margin-left: 10px;
 }
 
 .train-content-circle {
   border-radius: 50%;
   border-color: 1px solid white;
-  width: 40px;
-  height: 40px;
   background-color: #059f4a;
   -webkit-box-shadow: -1px 4px 8px -4px #000000;
   box-shadow: -1px 4px 8px -4px #000000;
@@ -607,14 +588,15 @@
 }
 
 .train-content-arrow {
-  position: absolute;
-  left: 40%;
-  bottom: 10%;
   cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
 }
 .train-content-arrow i {
   color: #059f4a;
   font-size: 20px;
+  margin-right: 10px;
 }
 
 .shape {
@@ -808,7 +790,6 @@
 .cooperate-card-image {
   display: flex;
   overflow: hidden;
-
 }
 .cooperate-card-image img {
   width: 300px;
@@ -868,12 +849,11 @@
   transform: translateX(500px);
   color: #059f4a;
   margin-right: 15px;
-  cursor: pointer;  
+  cursor: pointer;
 }
 /* share */
 .share {
   width: 100%;
-  height: 800px;
   position: relative;
 }
 
@@ -897,17 +877,12 @@
   height: 250px;
   background-color: #7ee5ac;
   position: absolute;
-  bottom: 100px;
-  right: -60px;
+  bottom: 150px;
+  right: -80px;
 }
-
-.share-content {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
+.share {
+  overflow-x: hidden;
 }
-
 .share-title {
   line-height: 1.8;
   text-align: right;
@@ -921,47 +896,23 @@
 .share-title p {
   font-size: large;
 }
-
-.share-card {
-  display: flex;
-  width: 70%;
-  height: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .share-circle-image {
   width: 100%;
-  height: 100%;
   display: flex;
   position: absolute;
   top: 120px;
-
-
 }
-.circle-image-1 {
-  border-radius: 50%;
-  width: 130px;
-  height: 130px;
-  overflow: hidden;
-  display: flex;
-  margin-left: 170px;
-}
-.circle-image-2 {
-  border-radius: 50%;
-  width: 130px;
-  height: 130px;
-  overflow: hidden;
-  display: flex;
-  margin-left: 320px;
-}
+.circle-image-1,
+.circle-image-2,
 .circle-image-3 {
+  position: absolute;
+  top: 0px;
+  left: 15%;
+  transform: translateY(-50%);
   border-radius: 50%;
   width: 130px;
   height: 130px;
   overflow: hidden;
-  display: flex;
-  margin-left: 320px;
 }
 .circle-image-1 img,
 .circle-image-2 img,
@@ -971,48 +922,41 @@
   object-fit: cover;
 }
 .share-card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 190px;
   display: flex;
+  justify-content: space-between;
+  margin: 0 4%;
 }
-.share-card-content-1 ,
-.share-card-content-2 ,
+.card-date {
+  margin: 30px 0 30px 0;
+}
+.share-card-content-1,
+.share-card-content-2,
 .share-card-content-3 {
-  flex: 1;
-  justify-content: space-evenly;
-  height:60%;
+  flex-wrap: wrap;
+  width: 30%;
+  margin-bottom: 50px;
+  position: relative;
+  height: 60%;
   border-radius: 0 50px 0 50px;
   line-height: 1.7;
   background-color: #ffffff;
   -webkit-box-shadow: 1px 5px 8px 4px rgba(0, 0, 0, 0.17);
   box-shadow: 1px 5px 8px 4px rgba(0, 0, 0, 0.17);
 }
-.share-card-content-1 {
-  margin: 0 20px 0 100px;
-}
-.share-card-content-2 {
-  margin: 0 20px;
-}
-.share-card-content-3 {
-  margin: 0 100px 0 10px;
-}
 .text-share-card-content {
   margin-top: 100px;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 .text-share-card-content h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .share-card-content p {
   font-size: large;
-  margin-bottom: 30px;
 }
 .share-more {
-  position: absolute;
-  bottom: 0px;
-  right: 50%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
   color: green;
   font-size: large;
 }
@@ -1057,9 +1001,9 @@
   border-radius: 5px 40px 5px 40px;
   overflow: hidden;
 }
-.photo-1 img:hover, 
-.photo-2 img:hover, 
-.photo-3 img:hover, 
+.photo-1 img:hover,
+.photo-2 img:hover,
+.photo-3 img:hover,
 .photo-4 img:hover,
 .photo-5 img:hover {
   transform: scale(1.1);
