@@ -107,25 +107,19 @@
     margin: 10px 40px 20px 20px;
     font-size: 25px;
   }
-  .arrow {
-    right: 40px;
-    bottom: 20px;
-    position: absolute;
+  .train {
+    margin-top: 10%;
   }
-.train {
-
-}
-.train-content {
-  flex-direction: column;
-}
+  .train-content {
+    flex-direction: column;
+  }
   .train-circle,
   .train-content-circle {
     display: none;
   }
   .train-title {
-    line-height: 1;
-    margin-bottom: 15px;
-    padding: 10px;
+    line-height: 1.5;
+    padding-right: 10%;
   }
   .train-title h2,
   .train-title p {
@@ -146,15 +140,13 @@
   .train-content-arrow {
     bottom: -15%;
   }
+  .card-shape {
+    flex-direction: column;
+    margin-top: 40%;
+  }
   .card-shape-1 {
-    width: 330px;
-    height: 350px;
-    left: 1%;
+    margin-bottom: 20px;
   }
-  .card-shape-2 {
-    width: 330px;
-  }
-
   .cooperate {
     flex-direction: column;
   }
@@ -174,10 +166,10 @@
   .cooperate-content-text {
     position: absolute;
     top: 0px;
-    margin: 10% 100px 0 100px;
+    margin: 5% 0;
   }
   .share {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
   .share-content,
   .share-circle-image,
@@ -188,7 +180,6 @@
   .share-card-content-1,
   .share-card-content-2,
   .share-card-content-3 {
-    margin: 0 20px 80px 20px;
     width: 100%;
   }
 
@@ -206,15 +197,18 @@
   }
 
   /* libary */
-
+  .photo-row-1,
+  .photo-row-2 {
+    flex-direction: column;
+  }
   .photo-title {
     margin: 0 0 40px 20px;
   }
   .photo-1,
-  .photo-3 {
-    margin: 0 10px 40px 10px;
-  }
-  .photo-4 {
-    margin-right: 10px;
+  .photo-2,
+  .photo-3,
+  .photo-4,
+  .photo-5 {
+    width: 100%;
   }
 }

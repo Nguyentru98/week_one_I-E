@@ -504,13 +504,14 @@
   right: 130px;
 }
 .arrow {
-  right: 200px;
-  bottom: 20px;
-  position: absolute;
+  width: 90%;
+  text-align: right;
+  
 }
 .arrow i {
   color: #059f4a;
   font-size: 20px;
+  margin: 15px;
 }
 .train {
   width: 100%;
@@ -555,7 +556,7 @@
 }
 .train-content-text {
   width: 50%;
-  line-height: 3.5;
+  line-height: 2.5;
 }
 .train-content-text h3 {
   font-size: 25px;
@@ -636,12 +637,14 @@
 }
 
 /* shape */
+.shape-content {
+  width: 100%;
+}
 .main-div {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 600px;
   background: linear-gradient(
     0deg,
     rgb(161, 231, 184) 0%,
@@ -692,16 +695,19 @@
   font-size: large;
   color: #ffffff;
 }
-
+.card-shape {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 15%;
+  padding: 2% 15%;
+}
 .card-shape-1 {
-  width: 400px;
-  height: 350px;
   border-radius: 5px 40px 5px 40px;
   background-color: #ffffff;
-  position: absolute;
-  left: 10%;
-  bottom: 10%;
+  height: 50%;
 }
+
 .card-shape-image-1 {
   overflow: hidden;
   height: 250px;
@@ -730,12 +736,9 @@
   cursor: pointer;
 }
 .card-shape-2 {
-  width: 400px;
-  height: 350px;
   border-radius: 5px 40px 5px 40px;
   background-color: #ffffff;
-  position: absolute;
-  bottom: 0px;
+  height: 50%;
 }
 .card-shape-image-2 {
   overflow: hidden;
@@ -967,7 +970,6 @@
 /* photo library */
 .photo-library {
   width: 100%;
-  height: 600px;
   margin-bottom: 100px;
 }
 .photo-title {
@@ -976,30 +978,36 @@
   margin: 0 0 40px 200px;
 }
 .photo-card {
-  width: 100%;
-  height: 80%;
-}
-
-.photo-card {
+  width: 80%;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-}
-.photo-row-1 {
-  flex: 1;
-  display: flex;
-  /* margin-bottom: 15px; */
-}
-.photo-row-2 {
-  flex: 1;
-  display: flex;
+  flex-wrap: wrap;
 }
 .photo-1 {
-  height: 210px;
-  margin-right: 15px;
-  width: 760px;
-  margin: 0 20px 0 200px;
   border-radius: 5px 40px 5px 40px;
   overflow: hidden;
+  padding: 0 15px;
+  width: 75%;
+  height: 250px;
+  margin-bottom: 25px;
+}
+.photo-2 {
+  border-radius: 5px 40px 5px 40px;
+  overflow: hidden;
+  padding: 0 15px;
+  width: 25%;
+  height: 250px;
+  margin-bottom: 25px;
+}
+.photo-3,
+.photo-4,
+.photo-5 {
+  border-radius: 5px 40px 5px 40px;
+  overflow: hidden;
+  padding: 0 15px;
+  width: 33.33%;
+  height: 250px;
+  margin-bottom: 25px;
 }
 .photo-1 img:hover,
 .photo-2 img:hover,
@@ -1008,40 +1016,14 @@
 .photo-5 img:hover {
   transform: scale(1.1);
 }
-.photo-2 {
-  width: 300px;
-  height: 210px;
-  border-radius: 5px 40px 5px 40px;
-  overflow: hidden;
-}
-.photo-3 {
-  height: 210px;
-  margin-right: 15px;
-  width: 400px;
-  margin: 0 20px 0 200px;
-  border-radius: 5px 40px 5px 40px;
-  overflow: hidden;
-}
-.photo-4 {
-  height: 210px;
-  margin-right: 20px;
-  width: 340px;
-  border-radius: 5px 40px 5px 40px;
-  overflow: hidden;
-}
-.photo-5 {
-  height: 210px;
-  margin-right: 15px;
-  width: 300px;
-  border-radius: 5px 40px 5px 40px;
-  overflow: hidden;
-}
+
 .photo-1 img,
 .photo-2 img,
 .photo-3 img,
 .photo-4 img,
 .photo-5 img {
   object-fit: cover;
+  border-radius: 5px 40px 5px 40px;
   width: 100%;
   height: 100%;
   transition: all 0.5s ease-in-out;
