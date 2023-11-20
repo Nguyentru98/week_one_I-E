@@ -16,6 +16,7 @@
   .footer-middle-col-1 {
     margin-bottom: 20px;
     font-size: 14px;
+    padding: 0 10px;
   }
   .footer-bottom {
     margin-top: 75px;
@@ -26,8 +27,18 @@
   }
   .footer-middle-col-2 {
     font-size: 14px ;
+    padding: 0 10px;
   }
   .footer-bottom span {
     font-size: 14px ;
+  }
+  .cooperate-content-text {
+    padding: 0 20px;
+  }
+  .card-shape {
+    padding: 30px;
+  }
+  .header-title {
+    font-size: 10px;
   }
 }
